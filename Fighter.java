@@ -18,12 +18,13 @@ public class Fighter extends Starship
         maneuverability = getBaseManeuverability() * (1 + (maneuverabilityBonus / 100));
     }
     
-    public Fighter(String starshipName, int baseInventorySlots, double baseDamagePerSecond, int baseHyperdriveRange,
+    public Fighter(String starshipName, int baseInventorySlots, double baseDamagePerSecond, double baseHyperdriveRange,
                    double baseShieldStrength, double baseManeuverability, double damagePerSecondBonus, double shieldStrengthBonus, double maneuverabilityBonus)
     {
         super(starshipName, baseInventorySlots, baseDamagePerSecond, 
               baseHyperdriveRange, baseShieldStrength, baseManeuverability);
         this.damagePerSecondBonus = damagePerSecondBonus;
+        this.shieldStrengthBonus = shieldStrengthBonus;
         this.maneuverabilityBonus = maneuverabilityBonus;
         damagePerSecond = baseDamagePerSecond * (1 + (damagePerSecondBonus / 100));
         shieldStrength = baseShieldStrength * (1 + (shieldStrengthBonus / 100));
@@ -94,21 +95,6 @@ public class Fighter extends Starship
     {
         super.setBaseManeuverability(newBaseManeuverability);
         maneuverability = newBaseManeuverability * (1 + (maneuverabilityBonus / 100));
-    }
-    
-    public void setDamagePerSecond(double newDamagePerSecond)
-    {
-        damagePerSecond = newDamagePerSecond;
-    }
-    
-    public void setShieldStrength(double newShieldStrength)
-    {
-        shieldStrength = newShieldStrength;
-    }
-    
-    public void setManeuverability(double newManeuverability)
-    {
-        maneuverability = newManeuverability;     
     }
     
     public String toString()
