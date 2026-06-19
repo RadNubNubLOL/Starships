@@ -3,14 +3,14 @@ public class Starship
     private String starshipName;
     private int baseInventorySlots;
     private double baseDamagePerSecond;
-    private int baseHyperdriveRange;
+    private double baseHyperdriveRange;
     private double baseShieldStrength;
     private double baseManeuverability;
     
     public Starship()
     {
         starshipName = "";
-        baseInventorySlots = 36;
+        baseInventorySlots = 24;
         baseDamagePerSecond = 33.8;
         baseHyperdriveRange = 101;
         baseShieldStrength = 165;
@@ -18,7 +18,7 @@ public class Starship
     }
     
     public Starship(String starshipName, int baseInventorySlots, double baseDamagePerSecond, 
-                    int baseHyperdriveRange, double baseShieldStrength, double baseManeuverability)
+                    double baseHyperdriveRange, double baseShieldStrength, double baseManeuverability)
     {
         this.starshipName = starshipName;
         this.baseInventorySlots = baseInventorySlots;
@@ -43,7 +43,7 @@ public class Starship
         return baseDamagePerSecond;    
     }
     
-    public int getBaseHyperdriveRange()
+    public double getBaseHyperdriveRange()
     {
         return baseHyperdriveRange;    
     }
@@ -73,7 +73,7 @@ public class Starship
         baseDamagePerSecond = newBaseDamagePerSecond;
     }
     
-    public void setBaseHyperdriveRange(int newBaseHyperdriveRange)
+    public void setBaseHyperdriveRange(double newBaseHyperdriveRange)
     {
         baseHyperdriveRange = newBaseHyperdriveRange;
     }
